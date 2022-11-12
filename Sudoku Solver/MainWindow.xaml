@@ -1,0 +1,125 @@
+﻿<Window x:Class="Sudoku_Solver.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sudoku_Solver"
+        mc:Ignorable="d"
+        Title="Sudoku Solver" Height="300" Width="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="arrayGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBox HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox00" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox01" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox02" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox03" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox04" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox05" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox06" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Column="7" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox07" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Column="8" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox08" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox10" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox11" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox12" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox13" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="1" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox14" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="1" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox15" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="1" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox16" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="1" Grid.Column="7" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox17" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="1" Grid.Column="8" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox18" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox20" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox21" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox22" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="2" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox23" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox24" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="2" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox25" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="2" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox26" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="2" Grid.Column="7" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox27" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="2" Grid.Column="8" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox28" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox30" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox31" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="3" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox32" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="3" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox33" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="3" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox34" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="3" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox35" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="3" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox36" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="3" Grid.Column="7" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox37" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="3" Grid.Column="8" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox38" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox40" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox41" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="4" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox42" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="4" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox43" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="4" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox44" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="4" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox45" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="4" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox46" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="4" Grid.Column="7" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox47" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="4" Grid.Column="8" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox48" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox50" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox51" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="5" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox52" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="5" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox53" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="5" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox54" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="5" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox55" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="5" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox56" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="5" Grid.Column="7" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox57" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="5" Grid.Column="8" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox58" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="6" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox60" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="6" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox61" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="6" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox62" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="6" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox63" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="6" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox64" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="6" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox65" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="6" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox66" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="6" Grid.Column="7" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox67" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="6" Grid.Column="8" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox68" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="7" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox70" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="7" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox71" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="7" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox72" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="7" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox73" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="7" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox74" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="7" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox75" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="7" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox76" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="7" Grid.Column="7" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox77" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="7" Grid.Column="8" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox78" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="8" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox80" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="8" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox81" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="8" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox82" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="8" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox83" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="8" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox84" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="8" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox85" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="8" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox86" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="8" Grid.Column="7" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox87" PreviewTextInput="textBox00_PreviewTextInput"/>
+            <TextBox Grid.Row="8" Grid.Column="8" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="textBox88" PreviewTextInput="textBox00_PreviewTextInput"/>
+        </Grid>
+        <Button x:Name="solveButton" Content="Solve sudoku" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Width="130" Height="20" Click="solveButton_Click"/>
+
+    </Grid>
+</Window>
